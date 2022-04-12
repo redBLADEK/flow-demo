@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.0/tachyons.css">
 		<title>My simple app</title>
 	</head>
 	<body>
-		<div class="vh-100 w-100 flex justify-center">
-			<div class="flex flex-column items-center justify-center">
-				<h2 class="fw4 lightred">Hi it's me</h2>
-				<p class="silver ma0">BU-GA-GA</p>
-				<div class="pt5">
-					<span id="env" class="white pv1 ph2 br-pill bg-light-blue"></span>
-				</div>
-			</div>
+		<div style="display:grid; grid-temlate-column:1fr 1fr 1fr; border:red solid; background:gray;">
+			<div style="text-align:center; font:20px white;">hello</div>
+			<div style="text-align:center; font:20px white;">привет</div>
+			<div style="text-align:center; font:20px white;">gutten tag</div>
 		</div>
-
+		
+		<button id="btn" onclick="doNothing()">click to me</button>
+		
 		<script>
-			var env = "<%= env %>";
-			document.getElementById("env").innerHTML = env;
+			function doNothing() {
+				let html = document.getElementById("btn").innerHTML = "Nothings happen!";
+			}
 		</script>
 	</body>
 </html>
